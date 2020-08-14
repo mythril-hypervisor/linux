@@ -1918,7 +1918,7 @@ void __init check_x2apic(void)
 #else /* CONFIG_X86_X2APIC */
 static int __init validate_x2apic(void)
 {
-	if (!apic_is_x2apic_enabled())
+	/* if (!apic_is_x2apic_enabled()) */
 		return 0;
 	/*
 	 * Checkme: Can we simply turn off x2apic here instead of panic?

@@ -816,11 +816,11 @@ void free_init_pages(const char *what, unsigned long begin, unsigned long end)
 		 * we are going to free part of that, we need to make that
 		 * writeable and non-executable first.
 		 */
-		set_memory_nx(begin, (end - begin) >> PAGE_SHIFT);
-		set_memory_rw(begin, (end - begin) >> PAGE_SHIFT);
+		/* set_memory_nx(begin, (end - begin) >> PAGE_SHIFT); */
+		/* set_memory_rw(begin, (end - begin) >> PAGE_SHIFT); */
 
-		free_reserved_area((void *)begin, (void *)end,
-				   POISON_FREE_INITMEM, what);
+		/* free_reserved_area((void *)begin, (void *)end, */
+		/* 		   POISON_FREE_INITMEM, what); */
 	}
 }
 
